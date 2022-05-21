@@ -1,0 +1,17 @@
+961. N-Repeated Element in Size 2N Array
+思路：
+巧妙解法https://leetcode.cn/problems/n-repeated-element-in-size-2n-array/solution/-by-wfnuser-hqzw/
+讲的非常好！！
+
+程序：
+class Solution {
+    public int repeatedNTimes(int[] nums) {
+        for(int i = 0; i < nums.length; i ++){
+            if(nums[i % nums.length] == nums[(i + 1) % nums.length])
+                return nums[i % nums.length];
+            if(nums[i % nums.length] == nums[(i + 2) % nums.length])
+                return nums[i % nums.length];
+        }
+        return -1;
+    }
+}
